@@ -4,4 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+cpal = "0.18.2"
 gtk = { package = "gtk4", version = "0.10" }
+hound = "3.5.1"
+simple_transcribe_rs = "1.0.4"
+tokio = { version = "1", features = ["rt-multi-thread"] }
