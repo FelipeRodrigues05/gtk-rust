@@ -1,3 +1,5 @@
+use std::fs;
+
 use gtk::glib;
 use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow, Box, Button, Orientation};
@@ -30,6 +32,9 @@ fn build_ui(app: &Application) {
     let button = Button::with_label("Sample Label");
     button.connect_clicked(|btn| {
         btn.set_label("Hello");
+        if let Err(e) = fs::write("foo.txt", "Hello World") {
+            eprintln!("err to save file: {e}");
+        }
     });
 
     content_box.append(&button);

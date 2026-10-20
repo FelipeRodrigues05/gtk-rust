@@ -2,7 +2,9 @@
 
 Projeto simples de interface gráfica em Rust usando GTK4.
 
-A aplicação abre uma janela com um botão. Ao clicar nele, o texto muda de `Sample Label` para `Hello`.
+A aplicação abre uma janela com um botão. Ao clicar nele, o texto muda de `Sample Label` para `Hello` e a aplicação usa `std::fs::write` para gravar `Hello World` no arquivo `foo.txt`, no diretório de trabalho atual.
+
+O arquivo é criado se não existir e seu conteúdo é sobrescrito a cada clique. Se a gravação falhar, uma mensagem de erro é exibida no terminal.
 
 ## Requisitos
 
